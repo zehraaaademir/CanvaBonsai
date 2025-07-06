@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BonsaiConnect Platform Canvas</title>
+    <style>
+        :root {
+            --producer-color: #e3f2fd;
+            --customer-color: #f1f8e9;
+            --core-color: #fff8e1;
+            --border-color: #bdbdbd;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .canvas-title {
+            text-align: center;
+            color: #2e7d32;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #4caf50;
+        }
+        
+        .canvas-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .header-cell {
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border: 1px solid var(--border-color);
+        }
+        
+        .producer-cell {
+            background-color: var(--producer-color);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+        }
+        
+        .customer-cell {
+            background-color: var(--customer-color);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+        }
+        
+        .core-cell {
+            background-color: var(--core-color);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            grid-column: span 2;
+        }
+        
+        h3 {
+            color: #1b5e20;
+            border-bottom: 1px solid #4caf50;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .cost-structure {
+            background-color: #ffecb3;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ffd54f;
+        }
+        
+        @media (max-width: 768px) {
+            .canvas-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-cell, .producer-cell, .customer-cell, .core-cell {
+                grid-column: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="canvas-title">Two-sided Digital Platform Canvas: BonsaiConnect</h1>
+    
+    <div class="canvas-grid">
+        <!-- Header Row -->
+        <div class="header-cell">Producer Segments</div>
+        <div class="header-cell">Pricing</div>
+        <div class="header-cell">Value Proposition (Producer)</div>
+        <div class="header-cell">Value Proposition (Customer)</div>
+        <div class="header-cell">Pricing</div>
+        <div class="header-cell">Customer Segments</div>
+        
+        <!-- Content Row 1 -->
+        <div class="producer-cell">
+            <h3>Producer Segments</h3>
+            <ul>
+                <li>Bonsai-Züchter</li>
+                <li>Asiatische Importeure</li>
+                <li>Lokale Handwerker</li>
+            </ul>
+        </div>
+        
+        <div class="producer-cell">
+            <h3>Pricing</h3>
+            <ul>
+                <li>5% Transaktionsgebühr</li>
+                <li>€10 Listing-Fee</li>
+                <li>Keine Grundgebühr</li>
+            </ul>
+        </div>
+        
+        <div class="producer-cell">
+            <h3>Value Proposition (Producer)</h3>
+            <ul>
+                <li>Zugang zu premium-Kunden</li>
+                <li>Automatisierte Abrechnung</li>
+                <li>Lager-/Logistik-Service</li>
+            </ul>
+        </div>
+        
+        <div class="customer-cell">
+            <h3>Value Proposition (Customer)</h3>
+            <ul>
+                <li>Kuratierte seltene Sorten</li>
+                <li>Echtheitszertifikat</li>
+                <li>Komplettsets (Baum + Zubehör)</li>
+            </ul>
+        </div>
+        
+        <div class="customer-cell">
+            <h3>Pricing</h3>
+            <ul>
+                <li>Festpreis + 2% Fee</li>
+                <li>Abo für Frühzugriff</li>
+            </ul>
+        </div>
+        
+        <div class="customer-cell">
+            <h3>Customer Segments</h3>
+            <ul>
+                <li>Hobby-Gärtner (30-60J)</li>
+                <li>Sammler</li>
+                <li>Urban Professionals</li>
+            </ul>
+        </div>
+        
+        <!-- Core Interaction Row -->
+        <div class="producer-cell">
+            <h3>Producer Journeys</h3>
+            <ul>
+                <li>Verifizierung + Training</li>
+                <li>Listing-Optimierung</li>
+                <li>Verkaufsanalysen</li>
+            </ul>
+        </div>
+        
+        <div class="core-cell">
+            <h3>Tools & Services</h3>
+            <ul>
+                <li>Verkäufer-Dashboard</li>
+                <li>KI-Bewertungsassistent</li>
+                <li>Logistik-Tracking</li>
+            </ul>
+            
+            <h3>Core Interaction</h3>
+            <p><strong>Matchmaking-Algorithmus:</strong></p>
+            <ol>
+                <li>Seltene Sorten identifizieren</li>
+                <li>Lokale Abholoptionen matchen</li>
+                <li>Kundenpräferenzen analysieren</li>
+            </ol>
+            
+            <h3>Filter</h3>
+            <ul>
+                <li>Qualitäts-Score > 4.0</li>
+                <li>Züchter-Zertifikat</li>
+                <li>Mindestbewertung 4.0+</li>
+            </ul>
+        </div>
+        
+        <div class="core-cell">
+            <h3>Partners</h3>
+            <ul>
+                <li>Bonsai-Verbände</li>
+                <li>Logistikpartner (DHL Green)</li>
+                <li>Payment-Provider (Stripe)</li>
+            </ul>
+            
+            <h3>Rules</h3>
+            <ul>
+                <li>14-tägige Rückgabegarantie</li>
+                <li>Transparentes Bewertungssystem</li>
+                <li>Verifizierte Fotos</li>
+            </ul>
+        </div>
+        
+        <div class="customer-cell">
+            <h3>Customer Journeys</h3>
+            <ul>
+                <li>Stil-Quiz → Empfehlungen</li>
+                <li>AR-Vorschau (App)</li>
+                <li>Community-Events</li>
+            </ul>
+        </div>
+        
+        <!-- Channels Row -->
+        <div class="producer-cell">
+            <h3>Channels (Producer)</h3>
+            <ul>
+                <li>Fachmessen</li>
+                <li>Züchter-Netzwerke</li>
+                <li>Dedizierter Account-Manager</li>
+            </ul>
+        </div>
+        
+        <div class="producer-cell"></div>
+        <div class="producer-cell"></div>
+        <div class="customer-cell"></div>
+        <div class="customer-cell"></div>
+        
+        <div class="customer-cell">
+            <h3>Channels (Customer)</h3>
+            <ul>
+                <li>Mobile App</li>
+                <li>Instagram Stories</li>
+                <li>Pop-up Stores</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="cost-structure">
+        <h2>Cost Structure & Revenue Streams</h2>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h3>Kostenstruktur</h3>
+                <ul>
+                    <li>Plattform-Entwicklung (40%)</li>
+                    <li>Marketing/Akquisition (30%)</li>
+                    <li>Betrugsprävention (15%)</li>
+                    <li>Payment-Gebühren (10%)</li>
+                    <li>Support (5%)</li>
+                </ul>
+            </div>
+            
+            <div style="flex: 1; min-width: 300px;">
+                <h3>Einnahmequellen</h3>
+                <ul>
+                    <li>Transaktionsgebühren (Producer: 5%, Customer: 2%)</li>
+                    <li>Premium-Abos (Frühzugriff €9.99/m)</li>
+                    <li>AR-Beratung (€4.99/Session)</li>
+                    <li>Analyse-Tools für Händler</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h3>Key Metrics</h3>
+        <ul>
+            <li>Producer Wachstum: +15% pro Monat</li>
+            <li>Kunden-LTV: €120</li>
+            <li>Match-Rate: 78%</li>
+        </ul>
+    </div>
+</body>
+</html>
