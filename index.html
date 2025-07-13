@@ -6,7 +6,7 @@
     <title>BonsaiConnect Platform Canvas</title>
     <style>
         :root {
-            --producer-color: #e3f2fd;
+            --supplier-color: #e3f2fd;
             --consumer-color: #f1f8e9;
             --core-color: #fff8e1;
             --border-color: #bdbdbd;
@@ -42,10 +42,11 @@
             padding: 10px;
             background-color: #e0e0e0;
             border: 1px solid var(--border-color);
+            grid-column: span 3;
         }
         
-        .producer-cell {
-            background-color: var(--producer-color);
+        .supplier-cell {
+            background-color: var(--supplier-color);
             border: 1px solid var(--border-color);
             padding: 15px;
         }
@@ -99,49 +100,60 @@
     <h1 class="canvas-title">BonsaiConnect Platform Canvas</h1>
     
     <div class="canvas-grid">
-        <!-- Producer Side -->
-        <div class="producer-cell">
+        <!-- Header -->
+        <div class="header-cell">Platform Business Model Canvas</div>
+        
+        <!-- Supplier Side -->
+        <div class="supplier-cell">
             <div class="section">
-                <h3>Producer Segments & Needs</h3>
+                <h3>SUPPLIERS</h3>
                 <ul>
-                    <li><strong>Bonsai-Züchter</strong>
-                        <ul>
-                            <li>Absatzmärkte für spezielle Sorten</li>
-                            <li>Reduzierung von Lagerkosten</li>
-                        </ul>
-                    </li>
-                    <li><strong>Asiatische Importeure</strong>
-                        <ul>
-                            <li>Dynamische Preisanpassung</li>
-                            <li>Automatisierte Abrechnung</li>
-                        </ul>
-                    </li>
-                    <li><strong>Lokale Handwerker</strong>
-                        <ul>
-                            <li>Zugang zu premium-Kunden</li>
-                            <li>Nutzung ungenutzter Kapazitäten</li>
-                        </ul>
-                    </li>
+                    <li>Premium-Bonsai-Züchter (Japan, China)</li>
+                    <li>Lokale Handwerker für Zubehör</li>
+                    <li>Bonsai-Speziallieferanten für Erde/Dünger</li>
+                    <li>Logistikpartner (DHL Green, lokale Kurierdienste)</li>
                 </ul>
             </div>
             
             <div class="section">
-                <h3>Key People & Skills</h3>
+                <h3>INVESTORS</h3>
                 <ul>
-                    <li>Bonsai-Experten für Qualitätsbewertung</li>
-                    <li>KI-Entwickler für Matching-Algorithmus</li>
-                    <li>Account-Manager für Premium-Züchter</li>
-                    <li>Community-Manager für Veranstaltungen</li>
+                    <li>Venture Capital: GreenTech Fonds</li>
+                    <li>Business Angels aus Gartenbau-Branche</li>
+                    <li>Strategische Investoren (Baumschulketten)</li>
+                    <li>Crowdfunding-Community</li>
                 </ul>
             </div>
             
             <div class="section">
-                <h3>Key Infrastructure</h3>
+                <h3>KEY PEOPLE & SKILLS</h3>
                 <ul>
-                    <li>Verkäufer-Dashboard mit Analyse-Tools</li>
-                    <li>Logistik-Integration (DHL Green)</li>
-                    <li>Zertifizierungssystem für Züchter</li>
-                    <li>Lagerkooperationen mit Partnern</li>
+                    <li>Bonsai-Meister für Qualitätszertifizierung</li>
+                    <li>Data Scientists für Matching-Algorithmus</li>
+                    <li>UX-Designer für AR-Beratungstool</li>
+                    <li>Community-Manager für Events</li>
+                    <li>Logistik-Experten für nachhaltigen Versand</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3>SUPPORTERS</h3>
+                <ul>
+                    <li>Bonsai-Verbände (Deutschland, Japan)</li>
+                    <li>Umweltorganisationen</li>
+                    <li>Botanische Gärten als Bildungspartner</li>
+                    <li>Hochschulen für Forschungsprojekte</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3>KEY INFRASTRUCTURE</h3>
+                <ul>
+                    <li>Cloud-basierte Plattform (AWS)</li>
+                    <li>Blockchain für Echtheitszertifikate</li>
+                    <li>AR-Technologie für mobile Beratung</li>
+                    <li>IoT-Sensoren für Lagerüberwachung</li>
+                    <li>API-Integration mit Logistikpartnern</li>
                 </ul>
             </div>
         </div>
@@ -149,97 +161,143 @@
         <!-- Core Section -->
         <div class="core-cell">
             <div class="section">
-                <h3>Core Service</h3>
+                <h3>CORE SERVICES</h3>
                 <ul>
-                    <li>KI-gestütztes Matchmaking</li>
-                    <li>Verifizierte Marktplatz-Transaktionen</li>
-                    <li>AR-Beratungstool</li>
-                    <li>Community-Plattform</li>
+                    <li>KI-gestütztes Matchmaking zwischen Angebot/Nachfrage</li>
+                    <li>Digitales Echtheitszertifikat für Bonsais</li>
+                    <li>AR-Beratungstool mit Experten-Konnektor</li>
+                    <li>Lagerverwaltung für Züchter</li>
+                    <li>Community-Plattform mit Challenges</li>
                 </ul>
             </div>
             
             <div class="section">
-                <h3>Value Proposition</h3>
+                <h3>VALUE PROPOSITION</h3>
                 
                 <div class="subsection">
-                    <h4>Mission</h4>
-                    <p>"Traditionelle Bonsai-Kultur mit digitaler Innovation verbinden - für Züchter, Sammler und die Natur"</p>
+                    <h4>MISSION</h4>
+                    <p>"Traditionelle Bonsai-Kultur durch digitale Innovation bewahren - für nachhaltige Wertschöpfung von Züchtern und Sammlern weltweit"</p>
                 </div>
                 
                 <div class="subsection">
-                    <h4>Core Value Propositions</h4>
+                    <h4>CORE VALUE PROPOSITIONS</h4>
                     <ul>
-                        <li>Kuratierte seltene Sorten mit Echtheitsgarantie</li>
+                        <li>Garantierte Echtheit seltener Sorten</li>
                         <li>Reduzierte Lagerkosten durch Direktvermittlung</li>
-                        <li>Persönliche Beratung durch AR-Technologie</li>
+                        <li>Persönliche Expertenberatung on-demand</li>
+                        <li>Nachhaltiger Handel durch lokale Abholoptionen</li>
                     </ul>
                 </div>
                 
                 <div class="subsection">
                     <h4>USP</h4>
                     <ul>
-                        <li>Hybrides Vertrauensmodell (physisch + digital)</li>
-                        <li>Plattform-exklusive Sorten</li>
-                        <li>Nachhaltige Logistik mit lokalen Abholoptionen</li>
+                        <li>Hybrides Vertrauensmodell (physische Verifikation + digitale Zertifikate)</li>
+                        <li>Plattform-exklusive "Masterpiece"-Editionen</li>
+                        <li>KI-basierte Pflegevorhersagen</li>
                     </ul>
                 </div>
                 
                 <div class="subsection">
-                    <h4>Touchpoints & Experience</h4>
+                    <h4>TOUCHPOINTS & EXPERIENCE</h4>
                     <ul>
                         <li>Mobile App mit AR-Vorschau</li>
-                        <li>Physische Pop-up Stores</li>
-                        <li>Community-Events & Workshops</li>
-                        <li>Persönlicher Account-Manager für Top-Züchter</li>
+                        <li>Physische Pop-up Stores in Kooperation mit botanischen Gärten</li>
+                        <li>Jährliche "BonsaiConnect Live" Messe</li>
+                        <li>Persönlicher Concierge-Service für Premium-Mitglieder</li>
+                        <li>Community-Forum mit Experten-Q&As</li>
                     </ul>
                 </div>
                 
                 <div class="subsection">
-                    <h4>Core Network Effects</h4>
+                    <h4>CORE NETWORK EFFECTS</h4>
                     <ul>
-                        <li>Mehr Produzenten → Größere Sortenvielfalt</li>
-                        <li>Mehr Vielfalt → Mehr Kunden</li>
-                        <li>Mehr Daten → Besseres Matching</li>
-                        <li>Besseres Matching → Höhere Zufriedenheit</li>
+                        <li>Mehr Züchter → Größere Sortenvielfalt → Mehr Sammler</li>
+                        <li>Mehr Transaktionen → Besseres KI-Matching → Höhere Zufriedenheit</li>
+                        <li>Community-Bewertungen → Höhere Qualitätsstandards → Premium-Preise</li>
                     </ul>
                 </div>
+            </div>
+            
+            <div class="section">
+                <h3>VALUE CAPTURE</h3>
+                <ul>
+                    <li>Transaktionsgebühren (5% Prod./2% Kund.)</li>
+                    <li>Premium-Mitgliedschaften (€19.99/Monat)</li>
+                    <li>AR-Beratungssessions (€9.99/Session)</li>
+                    <li>Provisionsbasierte Händler-Analysetools</li>
+                    <li>Vermarktung plattform-exklusiver Editionen</li>
+                </ul>
             </div>
         </div>
         
         <!-- Consumer Side -->
         <div class="consumer-cell">
             <div class="section">
-                <h3>Consumer Segments & Needs</h3>
+                <h3>CONSUMERS</h3>
+                <div class="subsection">
+                    <h4>Segments</h4>
+                    <ul>
+                        <li>Hobby-Gärtner (30-60 Jahre)</li>
+                        <li>Premium-Sammler</li>
+                        <li>Urban Professionals</li>
+                        <li>Wellness-Enthusiasten</li>
+                        <li>Luxus-Interior-Käufer</li>
+                    </ul>
+                </div>
+                
+                <div class="subsection">
+                    <h4>Needs</h4>
+                    <ul>
+                        <li>Zugang zu authentischen, seltenen Sorten</li>
+                        <li>Kompakte Pflanzen für kleine Stadtwohnungen</li>
+                        <li>Persönliche Beratung für Anfänger</li>
+                        <li>Stressfreie Rückgabegarantie</li>
+                        <li>Community-Zugehörigkeit</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>PARTNERS</h3>
                 <ul>
-                    <li><strong>Hobby-Gärtner (30-60J)</strong>
-                        <ul>
-                            <li>Kompakte Sorten für kleine Räume</li>
-                            <li>Einfache Pflegeanleitungen</li>
-                        </ul>
-                    </li>
-                    <li><strong>Premium-Sammler</strong>
-                        <ul>
-                            <li>Zugang zu limitierten Editionen</li>
-                            <li>Echtheitszertifikate</li>
-                        </ul>
-                    </li>
-                    <li><strong>Urban Professionals</strong>
-                        <ul>
-                            <li>Persönliche Kaufberatung</li>
-                            <li>Komplettsets (Baum + Zubehör)</li>
-                        </ul>
-                    </li>
+                    <li>Zertifizierungsstellen für Pflanzen</li>
+                    <li>Botanische Gärten für Veranstaltungen</li>
+                    <li>Luxus-Einrichtungshäuser für Pop-ups</li>
+                    <li>Influencer aus Garten-/Lifestyle-Bereich</li>
+                    <li>Nachhaltigkeitszertifizierer</li>
                 </ul>
             </div>
             
             <div class="section">
-                <h3>Key Data</h3>
+                <h3>KEY DATA</h3>
                 <ul>
-                    <li>Bonsai-Merkmalsdatenbank (Alter, Stil, Herkunft)</li>
-                    <li>Kundenpräferenzen & Suchverhalten</li>
-                    <li>Züchter-Bewertungen & Qualitäts-Scores</li>
-                    <li>Transaktions- und Retourendaten</li>
-                    <li>Lagerkapazitäten & Verfügbarkeiten</li>
+                    <li>Bonsai-DNA-Profile für Echtheitsprüfung</li>
+                    <li>Kundenpräferenz-Datenbank</li>
+                    <li>Züchter-Bewertungsindex</li>
+                    <li>Transaktionshistorien für KI-Training</li>
+                    <li>Umweltbedingungen-Log (Temperatur, Luftfeuchtigkeit)</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3>COST STRUCTURE</h3>
+                <ul>
+                    <li>Technologie-Entwicklung (40%)</li>
+                    <li>Qualitätszertifizierungen (20%)</li>
+                    <li>Marketing & Akquisition (25%)</li>
+                    <li>Betrugsprävention (10%)</li>
+                    <li>Community-Management (5%)</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3>USER ACTIVATION METRIC</h3>
+                <ul>
+                    <li>Match-to-Purchase Rate (Ziel: >65%)</li>
+                    <li>AR-Beratungsnutzung</li>
+                    <li>Community-Challenge-Teilnahme</li>
+                    <li>Premium-Conversion (3% der aktiven Nutzer)</li>
                 </ul>
             </div>
         </div>
