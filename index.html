@@ -5,342 +5,244 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BonsaiConnect Platform Canvas</title>
     <style>
-/* Network Effects Styling */
-.network-effects {
-    background-color: #f5f7ff;
-    padding: 25px;
-    border-radius: 10px;
-    border: 2px solid #5c6bc0;
-    margin-top: 40px;
-}
-
-.network-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin: 20px 0;
-}
-
-.producer-unconsumed, .customer-unmet {
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.producer-unconsumed {
-    background-color: #e3f2fd;
-    border: 1px solid #64b5f6;
-}
-
-.customer-unmet {
-    background-color: #f1f8e9;
-    border: 1px solid #81c784;
-}
-
-.segment-needs, .platform-lever {
-    background: rgba(255,255,255,0.7);
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.flywheel-effect {
-    margin-top: 30px;
-    text-align: center;
-}
-
-.flywheel {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.step {
-    background: white;
-    padding: 10px 15px;
-    border-radius: 20px;
-    border: 1px solid #5c6bc0;
-    font-weight: bold;
-}
-
-/* Responsive Anpassungen */
-@media (max-width: 768px) {
-    .network-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .flywheel {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+        :root {
+            --producer-color: #e3f2fd;
+            --consumer-color: #f1f8e9;
+            --core-color: #fff8e1;
+            --border-color: #bdbdbd;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .canvas-title {
+            text-align: center;
+            color: #2e7d32;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #4caf50;
+        }
+        
+        .canvas-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .header-cell {
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border: 1px solid var(--border-color);
+        }
+        
+        .producer-cell {
+            background-color: var(--producer-color);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+        }
+        
+        .consumer-cell {
+            background-color: var(--consumer-color);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+        }
+        
+        .core-cell {
+            background-color: var(--core-color);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+        }
+        
+        h3 {
+            color: #1b5e20;
+            border-bottom: 1px solid #4caf50;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .subsection {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .canvas-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1 class="canvas-title">Two-sided Digital Platform Canvas: BonsaiConnect</h1>
+    <h1 class="canvas-title">BonsaiConnect Platform Canvas</h1>
     
     <div class="canvas-grid">
-        <!-- Header Row -->
-        <div class="header-cell">Producer Segments</div>
-        <div class="header-cell">Pricing</div>
-        <div class="header-cell">Value Proposition (Producer)</div>
-        <div class="header-cell">Value Proposition (Customer)</div>
-        <div class="header-cell">Pricing</div>
-        <div class="header-cell">Customer Segments</div>
-        
-        <!-- Content Row 1 -->
+        <!-- Producer Side -->
         <div class="producer-cell">
-            <h3>Producer Segments</h3>
-            <ul>
-                <li>Bonsai-Züchter</li>
-                <li>Asiatische Importeure</li>
-                <li>Lokale Handwerker</li>
-            </ul>
+            <div class="section">
+                <h3>Producer Segments & Needs</h3>
+                <ul>
+                    <li><strong>Bonsai-Züchter</strong>
+                        <ul>
+                            <li>Absatzmärkte für spezielle Sorten</li>
+                            <li>Reduzierung von Lagerkosten</li>
+                        </ul>
+                    </li>
+                    <li><strong>Asiatische Importeure</strong>
+                        <ul>
+                            <li>Dynamische Preisanpassung</li>
+                            <li>Automatisierte Abrechnung</li>
+                        </ul>
+                    </li>
+                    <li><strong>Lokale Handwerker</strong>
+                        <ul>
+                            <li>Zugang zu premium-Kunden</li>
+                            <li>Nutzung ungenutzter Kapazitäten</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3>Key People & Skills</h3>
+                <ul>
+                    <li>Bonsai-Experten für Qualitätsbewertung</li>
+                    <li>KI-Entwickler für Matching-Algorithmus</li>
+                    <li>Account-Manager für Premium-Züchter</li>
+                    <li>Community-Manager für Veranstaltungen</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3>Key Infrastructure</h3>
+                <ul>
+                    <li>Verkäufer-Dashboard mit Analyse-Tools</li>
+                    <li>Logistik-Integration (DHL Green)</li>
+                    <li>Zertifizierungssystem für Züchter</li>
+                    <li>Lagerkooperationen mit Partnern</li>
+                </ul>
+            </div>
         </div>
         
-        <div class="producer-cell">
-            <h3>Pricing</h3>
-            <ul>
-                <li>5% Transaktionsgebühr</li>
-                <li>€10 Listing-Fee</li>
-                <li>Keine Grundgebühr</li>
-            </ul>
-        </div>
-        
-        <div class="producer-cell">
-            <h3>Value Proposition (Producer)</h3>
-            <ul>
-                <li>Zugang zu premium-Kunden</li>
-                <li>Automatisierte Abrechnung</li>
-                <li>Lager-/Logistik-Service</li>
-            </ul>
-        </div>
-        
-        <div class="customer-cell">
-            <h3>Value Proposition (Customer)</h3>
-            <ul>
-                <li>Kuratierte seltene Sorten</li>
-                <li>Echtheitszertifikat</li>
-                <li>Komplettsets (Baum + Zubehör)</li>
-            </ul>
-        </div>
-        
-        <div class="customer-cell">
-            <h3>Pricing</h3>
-            <ul>
-                <li>Festpreis + 2% Fee</li>
-                <li>Abo für Frühzugriff</li>
-            </ul>
-        </div>
-        
-        <div class="customer-cell">
-            <h3>Customer Segments</h3>
-            <ul>
-                <li>Hobby-Gärtner (30-60J)</li>
-                <li>Sammler</li>
-                <li>Urban Professionals</li>
-            </ul>
-        </div>
-        
-        <!-- Core Interaction Row -->
-        <div class="producer-cell">
-            <h3>Producer Journeys</h3>
-            <ul>
-                <li>Verifizierung + Training</li>
-                <li>Listing-Optimierung</li>
-                <li>Verkaufsanalysen</li>
-            </ul>
-        </div>
-        
+        <!-- Core Section -->
         <div class="core-cell">
-            <h3>Tools & Services</h3>
-            <ul>
-                <li>Verkäufer-Dashboard</li>
-                <li>KI-Bewertungsassistent</li>
-                <li>Logistik-Tracking</li>
-            </ul>
-            
-            <h3>Core Interaction</h3>
-            <p><strong>Matchmaking-Algorithmus:</strong></p>
-            <ol>
-                <li>Seltene Sorten identifizieren</li>
-                <li>Lokale Abholoptionen matchen</li>
-                <li>Kundenpräferenzen analysieren</li>
-            </ol>
-            
-            <h3>Filter</h3>
-            <ul>
-                <li>Qualitäts-Score > 4.0</li>
-                <li>Züchter-Zertifikat</li>
-                <li>Mindestbewertung 4.0+</li>
-            </ul>
-        </div>
-        
-        <div class="core-cell">
-            <h3>Partners</h3>
-            <ul>
-                <li>Bonsai-Verbände</li>
-                <li>Logistikpartner (DHL Green)</li>
-                <li>Payment-Provider (Stripe)</li>
-            </ul>
-            
-            <h3>Rules</h3>
-            <ul>
-                <li>14-tägige Rückgabegarantie</li>
-                <li>Transparentes Bewertungssystem</li>
-                <li>Verifizierte Fotos</li>
-            </ul>
-        </div>
-        
-        <div class="customer-cell">
-            <h3>Customer Journeys</h3>
-            <ul>
-                <li>Stil-Quiz → Empfehlungen</li>
-                <li>AR-Vorschau (App)</li>
-                <li>Community-Events</li>
-            </ul>
-        </div>
-        
-        <!-- Channels Row -->
-        <div class="producer-cell">
-            <h3>Channels (Producer)</h3>
-            <ul>
-                <li>Fachmessen</li>
-                <li>Züchter-Netzwerke</li>
-                <li>Dedizierter Account-Manager</li>
-            </ul>
-        </div>
-        
-        <div class="producer-cell"></div>
-        <div class="producer-cell"></div>
-        <div class="customer-cell"></div>
-        <div class="customer-cell"></div>
-        
-        <div class="customer-cell">
-            <h3>Channels (Customer)</h3>
-            <ul>
-                <li>Mobile App</li>
-                <li>Instagram Stories</li>
-                <li>Pop-up Stores</li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="cost-structure">
-        <h2>Cost Structure & Revenue Streams</h2>
-        
-        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-            <div style="flex: 1; min-width: 300px;">
-                <h3>Kostenstruktur</h3>
+            <div class="section">
+                <h3>Core Service</h3>
                 <ul>
-                    <li>Plattform-Entwicklung (40%)</li>
-                    <li>Marketing/Akquisition (30%)</li>
-                    <li>Betrugsprävention (15%)</li>
-                    <li>Payment-Gebühren (10%)</li>
-                    <li>Support (5%)</li>
-                </ul>
-            </div>
-            <!-- Füge diesen Code NACH der Cost Structure ein -->
-<div class="network-effects">
-    <h2>Core Network Effects</h2>
-    
-    <div class="network-grid">
-        <!-- Producer Unconsumed Capacity -->
-        <div class="producer-unconsumed">
-            <h3>Producer Unconsumed Capacity</h3>
-            
-            <div class="segment-needs">
-                <h4>Key Segments</h4>
-                <ul>
-                    <li>Züchter mit saisonalen Überschüssen</li>
-                    <li>Importeure mit Lagerkapazitäten</li>
-                    <li>Handwerker mit ungenutzten Produktionszeiten</li>
+                    <li>KI-gestütztes Matchmaking</li>
+                    <li>Verifizierte Marktplatz-Transaktionen</li>
+                    <li>AR-Beratungstool</li>
+                    <li>Community-Plattform</li>
                 </ul>
             </div>
             
-            <div class="segment-needs">
-                <h4>Unmet Needs</h4>
-                <ul>
-                    <li>Absatzmärkte für spezielle Sorten</li>
-                    <li>Dynamische Preisanpassung bei Überangebot</li>
-                    <li>Reduzierung von Lagerkosten</li>
-                </ul>
-            </div>
-            
-            <div class="platform-lever">
-                <h4>Platform Solution</h4>
-                <ul>
-                    <li><strong>Flash-Sale Channel</strong> für überschüssige Bestände</li>
-                    <li><strong>KI-Preismodell</strong> für saisonale Anpassungen</li>
-                    <li><strong>Lagerkooperationen</strong> mit Logistikpartnern</li>
-                </ul>
-            </div>
-        </div>
-        
-        <!-- Customer Unmet Needs -->
-        <div class="customer-unmet">
-            <h3>Customer Unmet Needs</h3>
-            
-            <div class="segment-needs">
-                <h4>Key Segments</h4>
-                <ul>
-                    <li>Sammler seltener Sorten</li>
-                    <li>Einsteiger mit Beratungsbedarf</li>
-                    <li>Urban Gardener mit Platzlimit</li>
-                </ul>
-            </div>
-            
-            <div class="segment-needs">
-                <h4>Unmet Needs</h4>
-                <ul>
-                    <li>Zugang zu limitierten Editionen</li>
-                    <li>Persönliche Kaufberatung</li>
-                    <li>Kompakte Sorten für kleine Räume</li>
-                </ul>
-            </div>
-            
-            <div class="platform-lever">
-                <h4>Platform Solution</h4>
-                <ul>
-                    <li><strong>Exklusive Drops</strong> für Premium-Mitglieder</li>
-                    <li><strong>AR-Beratungstool</strong> mit Experten-Connect</li>
-                    <li><strong>Space-Optimized Kategorie</strong></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <div class="flywheel-effect">
-        <h4>Network Effect Flywheel</h4>
-        <div class="flywheel">
-            <div class="step">1. Mehr Züchter →</div>
-            <div class="step">2. Größere Sortenvielfalt →</div>
-            <div class="step">3. Mehr Sammler →</div>
-            <div class="step">4. Höhere Transaktionen →</div>
-            <div class="step">5. Attraktiv für Premium-Züchter</div>
-        </div>
-    </div>
-</div>
-            
-            <div style="flex: 1; min-width: 300px;">
-                <h3>Einnahmequellen</h3>
-                <ul>
-                    <li>Transaktionsgebühren (Producer: 5%, Customer: 2%)</li>
-                    <li>Premium-Abos (Frühzugriff €9.99/m)</li>
-                    <li>AR-Beratung (€4.99/Session)</li>
-                    <li>Analyse-Tools für Händler</li>
-                </ul>
+            <div class="section">
+                <h3>Value Proposition</h3>
+                
+                <div class="subsection">
+                    <h4>Mission</h4>
+                    <p>"Traditionelle Bonsai-Kultur mit digitaler Innovation verbinden - für Züchter, Sammler und die Natur"</p>
+                </div>
+                
+                <div class="subsection">
+                    <h4>Core Value Propositions</h4>
+                    <ul>
+                        <li>Kuratierte seltene Sorten mit Echtheitsgarantie</li>
+                        <li>Reduzierte Lagerkosten durch Direktvermittlung</li>
+                        <li>Persönliche Beratung durch AR-Technologie</li>
+                    </ul>
+                </div>
+                
+                <div class="subsection">
+                    <h4>USP</h4>
+                    <ul>
+                        <li>Hybrides Vertrauensmodell (physisch + digital)</li>
+                        <li>Plattform-exklusive Sorten</li>
+                        <li>Nachhaltige Logistik mit lokalen Abholoptionen</li>
+                    </ul>
+                </div>
+                
+                <div class="subsection">
+                    <h4>Touchpoints & Experience</h4>
+                    <ul>
+                        <li>Mobile App mit AR-Vorschau</li>
+                        <li>Physische Pop-up Stores</li>
+                        <li>Community-Events & Workshops</li>
+                        <li>Persönlicher Account-Manager für Top-Züchter</li>
+                    </ul>
+                </div>
+                
+                <div class="subsection">
+                    <h4>Core Network Effects</h4>
+                    <ul>
+                        <li>Mehr Produzenten → Größere Sortenvielfalt</li>
+                        <li>Mehr Vielfalt → Mehr Kunden</li>
+                        <li>Mehr Daten → Besseres Matching</li>
+                        <li>Besseres Matching → Höhere Zufriedenheit</li>
+                    </ul>
+                </div>
             </div>
         </div>
         
-        <h3>Key Metrics</h3>
-        <ul>
-            <li>Producer Wachstum: +15% pro Monat</li>
-            <li>Kunden-LTV: €120</li>
-            <li>Match-Rate: 78%</li>
-        </ul>
+        <!-- Consumer Side -->
+        <div class="consumer-cell">
+            <div class="section">
+                <h3>Consumer Segments & Needs</h3>
+                <ul>
+                    <li><strong>Hobby-Gärtner (30-60J)</strong>
+                        <ul>
+                            <li>Kompakte Sorten für kleine Räume</li>
+                            <li>Einfache Pflegeanleitungen</li>
+                        </ul>
+                    </li>
+                    <li><strong>Premium-Sammler</strong>
+                        <ul>
+                            <li>Zugang zu limitierten Editionen</li>
+                            <li>Echtheitszertifikate</li>
+                        </ul>
+                    </li>
+                    <li><strong>Urban Professionals</strong>
+                        <ul>
+                            <li>Persönliche Kaufberatung</li>
+                            <li>Komplettsets (Baum + Zubehör)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3>Key Data</h3>
+                <ul>
+                    <li>Bonsai-Merkmalsdatenbank (Alter, Stil, Herkunft)</li>
+                    <li>Kundenpräferenzen & Suchverhalten</li>
+                    <li>Züchter-Bewertungen & Qualitäts-Scores</li>
+                    <li>Transaktions- und Retourendaten</li>
+                    <li>Lagerkapazitäten & Verfügbarkeiten</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 </html>
